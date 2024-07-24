@@ -66,7 +66,7 @@ export class SidebarComponent {
       routerLink: '/dashboard/settings',
     },
   ];
-  selectedIndex = 3;
+  selectedIndex = -1;
 
   router = inject(Router);
   constructor() {}

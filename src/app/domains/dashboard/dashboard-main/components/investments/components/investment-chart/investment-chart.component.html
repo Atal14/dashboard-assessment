@@ -5,10 +5,10 @@
     </div>
     <div class="chart">
       <p-chart
+        #debitChart
         type="bar"
         [data]="debitCreditData"
         [options]="debitCreditOptions"
-        [responsive]="true"
       />
     </div>
   </div>
@@ -23,7 +23,6 @@
         type="line"
         [data]="monthlyRevenueData"
         [options]="monthlyRevenueOptions"
-        [responsive]="true"
       />
     </div>
   </div>
