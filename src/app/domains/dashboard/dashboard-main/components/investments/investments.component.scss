@@ -1,0 +1,40 @@
+:host {
+  width: 100%;
+  height: 100%;
+}
+
+.investment-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  padding: 1%;
+}
+
+.investment-widgets-section {
+  display: flex;
+  width: 100%;
+  height: 13%;
+}
+
+.investment-chart-section {
+  display: flex;
+  width: 100%;
+  height: 43%;
+}
+
+.investment-contact-section {
+  display: flex;
+  width: 54%;
+  height: 43%;
+  margin-top: 1rem;
+}
+
+.investment-trading-section {
+  display: flex;
+  width: 45%;
+  height: 43%;
+  margin-left: 1%;
+  margin-top: 1rem;
+}

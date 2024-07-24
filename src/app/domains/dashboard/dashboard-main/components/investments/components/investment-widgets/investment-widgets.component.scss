@@ -1,0 +1,73 @@
+:host {
+  width: 100%;
+}
+
+.investment-widgets {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.widget {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 1% 2%;
+  gap: 10px;
+}
+
+.widget-icon {
+  background-color: #dcfaf8;
+  border-radius: 50%;
+}
+
+.widget-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  width: 70%;
+}
+
+.widget-text-heading {
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.52px;
+  text-align: left;
+  color: #718ebf;
+}
+
+.widget-text-number {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.36px;
+  text-align: left;
+  color: #232323;
+}
+
+.icon {
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+.icon-widget-money {
+  @extend .icon;
+  background-image: url("../../../../../../../../assets/icons/widget-money.svg");
+}
+
+.icon-widget-pie {
+  @extend .icon;
+  background-image: url("../../../../../../../../assets/icons/widget-pie.svg");
+}
+
+.icon-widget-return {
+  @extend .icon;
+  background-image: url("../../../../../../../../assets/icons/widget-return.svg");
+}

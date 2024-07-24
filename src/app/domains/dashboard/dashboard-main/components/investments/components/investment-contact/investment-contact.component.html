@@ -1,0 +1,66 @@
+<section class="investment-contact">
+  <div class="card">
+    <div class="chart-heading">
+      <span class="chart-heading-text">Contact Form</span>
+    </div>
+    <div class="form">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <div class="field">
+          <label for="cardType">Card Type</label>
+          <input
+            pInputText
+            id="cardType"
+            aria-describedby="cardType-help"
+            placeholder="Email"
+            formControlName="cardType"
+            [ngClass]="{
+              error:
+                contactForm.get('cardType')?.invalid &&
+                contactForm.get('cardType')?.touched
+            }"
+          />
+          <small
+            *ngIf="contactForm.get('cardType')?.touched && contactForm.get('cardType')?.errors?.['required']"
+          >
+            Field is required
+          </small>
+          <small
+            *ngIf="contactForm.get('cardType')?.touched && contactForm.get('cardType')?.errors?.['email']"
+          >
+            Invalid Email
+          </small>
+        </div>
+
+        <div class="field">
+          <label for="nameOnCard">Name On Card</label>
+          <input
+            pInputText
+            id="nameOnCard"
+            aria-describedby="card-name-help"
+            placeholder="My Cards"
+            formControlName="nameOnCard"
+            class="ng-invalid ng-dirty"
+            [ngClass]="{
+              error:
+                contactForm.get('nameOnCard')?.invalid &&
+                contactForm.get('nameOnCard')?.touched
+            }"
+          />
+          <small
+            *ngIf="contactForm.get('nameOnCard')?.touched && contactForm.get('nameOnCard')?.errors?.['required']"
+          >
+            Field is required
+          </small>
+        </div>
+
+        <div class="action-buttons">
+          <p-button
+            type="submit"
+            label="Submit"
+            styleClass="custom-button"
+          ></p-button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

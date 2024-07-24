@@ -1,0 +1,87 @@
+:host::ng-deep {
+  .custom-button {
+    background: #1814f3;
+    border-radius: 9px;
+  }
+}
+
+:host {
+  width: 100%;
+}
+
+// TODO this and chart has too much in common need to move all these classes to a common file
+.investment-contact {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.chart-heading {
+  margin-bottom: 1rem;
+}
+
+.chart-heading-text {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21.78px;
+  text-align: left;
+  color: #333b69;
+}
+
+.form {
+  padding: 2%;
+  background-color: #ffffff;
+  border-radius: 20px;
+  height: 100%;
+
+  form {
+    height: 100%;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    gap: 1rem;
+  }
+
+  label {
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.52px;
+    text-align: left;
+    color: #232323;
+  }
+
+  input {
+    border: 1px solid #dfeaf2;
+    border-radius: 12px;
+  }
+
+  input::placeholder {
+    opacity: 0.5;
+    color: #718ebf;
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .error {
+    border: 1px solid red;
+  }
+
+  small {
+    margin-top: -11px;
+    color: rgb(245, 100, 100);
+  }
+}

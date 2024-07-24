@@ -1,0 +1,144 @@
+:host {
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 1%;
+}
+
+.heading {
+  display: flex;
+  width: 100%;
+  height: 10%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.heading-text {
+  font-family: Barlow;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: left;
+  color: #343c6a;
+}
+
+.dashboard-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 65%;
+  align-items: center;
+  // justify-content: space-evenly;
+}
+
+.menu-item {
+  display: flex;
+  width: 100%;
+  height: 12.5%;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menu-item-icon {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+}
+
+.menu-item-text {
+  width: 75%;
+}
+
+.menu-text {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  text-align: left;
+}
+
+.active {
+  padding-left: 1%;
+  background-color: #2d60ff;
+  border-radius: 0px 10px 10px 0px;
+  height: 95%;
+}
+
+.passive {
+  @extend .active;
+  background-color: transparent;
+}
+
+.icon {
+  background-repeat: no-repeat;
+  width: 36px;
+  height: 36px;
+  display: block;
+}
+
+.icon-dash {
+  @extend .icon;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-card {
+  @extend .icon;
+  background-image: url("../../../assets/icons/card.svg");
+}
+
+.icon-dash-dashboard {
+  @extend .icon-dash;
+  background-image: url("../../../assets/icons/dash-dashboard.svg");
+}
+
+.icon-dash-transaction {
+  @extend .icon-dash;
+  background-image: url("../../../assets/icons/dash-transaction.svg");
+}
+
+.icon-dash-accounts {
+  @extend .icon-dash;
+  background-image: url("../../../assets/icons/dash-accounts.svg");
+}
+
+.icon-dash-investment {
+  @extend .icon-dash;
+  background-image: url("../../../assets/icons/dash-investment.svg");
+}
+
+.icon-dash-investment-colored {
+  @extend .icon-dash;
+  background-image: url("../../../assets/icons/dash-investment-colored.svg");
+}
+
+.icon-dash-credit-card {
+  @extend .icon-dash;
+  background-image: url("../../../assets/icons/dash-credit-card.svg");
+}
+
+.icon-dash-loan {
+  @extend .icon-dash;
+  background-image: url("../../../assets/icons/dash-loan.svg");
+}
+
+.icon-dash-service {
+  @extend .icon-dash;
+  background-image: url("../../../assets/icons/dash-service.svg");
+}
+
+.icon-dash-privileges {
+  @extend .icon-dash;
+  background-image: url("../../../assets/icons/dash-privileges.svg");
+}
+
+.icon-dash-settings {
+  @extend .icon-dash;
+  background-image: url("../../../assets/icons/dash-settings.svg");
+}

@@ -1,0 +1,31 @@
+<section class="main-container">
+  <p-splitter
+    [style]="{ height: '100%' }"
+    [panelSizes]="[15, 85]"
+    [minSizes]="[15, 85]"
+  >
+    <ng-template pTemplate>
+      <div class="spliter-item">
+        <app-sidebar (headerEmitter)="onHeaderChange($event)"></app-sidebar>
+      </div>
+    </ng-template>
+    <ng-template pTemplate>
+      <p-splitter
+        layout="vertical"
+        [panelSizes]="[10, 90]"
+        [minSizes]="[10, 90]"
+      >
+        <ng-template pTemplate>
+          <div class="spliter-item">
+            <app-topbar [heading]="heading"></app-topbar>
+          </div>
+        </ng-template>
+        <ng-template pTemplate>
+          <div class="spliter-item">
+            <router-outlet></router-outlet>
+          </div>
+        </ng-template>
+      </p-splitter>
+    </ng-template>
+  </p-splitter>
+</section>

@@ -1,0 +1,30 @@
+<section class="investment-chart">
+  <div class="card">
+    <div class="chart-heading">
+      <span class="chart-heading-text">Debit & Credit Overview</span>
+    </div>
+    <div class="chart">
+      <p-chart
+        type="bar"
+        [data]="debitCreditData"
+        [options]="debitCreditOptions"
+        [responsive]="true"
+      />
+    </div>
+  </div>
+
+  <!-- This should be a dynamic component, with chart type, data, option passed as inputs. -->
+  <div class="card">
+    <div class="chart-heading">
+      <span class="chart-heading-text">Monthly Revenue</span>
+    </div>
+    <div class="chart">
+      <p-chart
+        type="line"
+        [data]="monthlyRevenueData"
+        [options]="monthlyRevenueOptions"
+        [responsive]="true"
+      />
+    </div>
+  </div>
+</section>

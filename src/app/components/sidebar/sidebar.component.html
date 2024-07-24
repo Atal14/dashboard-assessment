@@ -1,0 +1,38 @@
+<section class="sidebar-container">
+  <div class="heading">
+    <div class="menu-item-icon">
+      <i class="icon-card"></i>
+    </div>
+    <div class="menu-item-text">
+      <span class="heading-text">BDash.</span>
+    </div>
+  </div>
+
+  <div class="dashboard-menu">
+    <div
+      class="menu-item"
+      *ngFor="
+        let item of dashboardMenuItems;
+        let i = index;
+        trackBy: identifyBy
+      "
+      (click)="onMenuItemClick(item, i)"
+    >
+      <div [class]="selectedIndex === i ? 'active' : 'passive'">
+        &NonBreakingSpace;
+      </div>
+      <div class="menu-item-icon">
+        <i
+          [class]="
+            i === 3 && selectedIndex === 3
+              ? item.iconClass + '-colored'
+              : item.iconClass
+          "
+        ></i>
+      </div>
+      <div class="menu-item-text">
+        <span class="menu-text">{{ item.name }}</span>
+      </div>
+    </div>
+  </div>
+</section>
