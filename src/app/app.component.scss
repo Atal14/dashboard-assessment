@@ -1,3 +1,12 @@
+:host::ng-deep {
+  .p-splitter-horizontal > .p-splitter-gutter,
+  .p-splitter-vertical > .p-splitter-gutter,
+  .p-splitter .p-splitter-gutter {
+    cursor: none;
+    background-color: #e6eff5;
+  }
+}
+
 .main-container {
   height: 97.5vh;
   width: 100%;
