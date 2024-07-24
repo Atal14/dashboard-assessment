@@ -29,6 +29,7 @@ export class InvestmentChartComponent implements OnInit, AfterViewInit {
         fill: false,
         tension: 0.5,
         pointStyle: false,
+        borderColor: '#16DBCC',
       },
     ],
   };
