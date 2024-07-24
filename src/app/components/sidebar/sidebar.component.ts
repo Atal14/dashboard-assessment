@@ -1,7 +1,14 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
-import { Component, EventEmitter, inject, Output } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import {
+  Component,
+  EventEmitter,
+  inject,
+  OnDestroy,
+  Output,
+} from '@angular/core';
+import { EventType, Router, RouterLink } from '@angular/router';
 import { MenuModule } from 'primeng/menu';
+import { Subject, takeLast, takeUntil } from 'rxjs';
 
 export interface IDashMenuItem {
   name: string;
@@ -16,9 +23,9 @@ export interface IDashMenuItem {
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss',
 })
-export class SidebarComponent {
+export class SidebarComponent implements OnDestroy {
   @Output() headerEmitter = new EventEmitter<string>();
-
+  unSub = new Subject<boolean>();
   dashboardMenuItems: IDashMenuItem[] = [
     {
       name: 'Dashboard',
@@ -69,7 +76,16 @@ export class SidebarComponent {
   selectedIndex = -1;
 
   router = inject(Router);
-  constructor() {}
+  constructor() {
+    this.router.events.pipe(takeUntil(this.unSub)).subscribe((ev) => {
+      if (ev.type === EventType.NavigationEnd) {
+        const index = this.dashboardMenuItems.findIndex((item) => {
+          return item.routerLink === ev.url;
+        });
+        this.selectedIndex = index;
+      }
+    });
+  }
 
   onMenuItemClick(menuItem: IDashMenuItem, index: number) {
     this.router.navigate([menuItem.routerLink]);
@@ -79,5 +95,10 @@ export class SidebarComponent {
 
   identifyBy(index: number, item: IDashMenuItem) {
     return item.name;
+  }
+
+  ngOnDestroy(): void {
+    this.unSub.next(true);
+    this.unSub.complete();
   }
 }
