@@ -1,5 +1,7 @@
+@import "../../../../../../../../styles/media-quries.scss";
 :host {
   width: 100%;
+  height: 100%;
 }
 
 :host::ng-deep {
@@ -19,6 +21,10 @@
   width: 100%;
   height: 100%;
   justify-content: space-between;
+
+  @include for-phone-only {
+    flex-wrap: wrap;
+  }
 }
 
 .card {
@@ -26,6 +32,10 @@
   flex-direction: column;
   width: 48%;
   height: 100%;
+
+  @include for-phone-only {
+    width: 100%;
+  }
 }
 
 .chart-heading {
