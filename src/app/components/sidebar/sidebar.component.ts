@@ -72,7 +72,6 @@ export class SidebarComponent {
   constructor() {}
 
   onMenuItemClick(menuItem: IDashMenuItem, index: number) {
-    console.log(index);
     this.router.navigate([menuItem.routerLink]);
     this.selectedIndex = index;
     this.headerEmitter.emit(menuItem.name);

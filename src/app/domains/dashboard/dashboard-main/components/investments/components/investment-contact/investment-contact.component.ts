@@ -23,7 +23,6 @@ export class InvestmentContactComponent {
   });
 
   onSubmit(): void {
-    console.log(this.contactForm);
     if (this.contactForm.valid) {
       console.log(this.contactForm.value);
     }
